@@ -1,16 +1,44 @@
-# This is a sample Python script.
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#print(help(requests))
 
+class Human:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def Func():
+    pass
 
+func = Func
+print(func.__name__)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print(type(Human))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+number = 100
+print(isinstance(number, Human))
+print(isinstance(number, int))
+print(issubclass(int, Human))
+
+import inspect
+
+print(inspect.ismodule(Human))
+print(inspect.isclass(Human))
+
+sig = inspect.signature(Human)
+for parameter in sig.parameters.values():
+    print(parameter.name, parameter.default())
+
+import sys
+
+print(sys.executable)
+print(sys.version)
+print(sys.platform)
+print(sys.argv)
+
+import random
+print(help(random))
+print(type(random.Random))
+print(inspect.signature(random.Random))
+print(type(random.SystemRandom))
+print(inspect.signature(random.SystemRandom))
